@@ -1,0 +1,16 @@
+{% extends './layout.html' %}
+
+{% block content %}
+
+<div class="container text-center">
+  <h2>Welcome to your passwords keeper page!</h1>
+  <br/>
+  <h4>You can view all your sessions with its corresponding platform, username, email and password in the section <a href="{% url 'passwords' %}">passwords</a></h3>
+  <h4>Or add a new session in the section <a href="{% url 'add' %}">add</a></h3>
+  <br/>
+  <h4>If you need more information go to <a href="{% url 'about' %}">about</a></h3>
+  <br/>
+  <h4>Thank you for using password keeper! :)<h3>
+</div>
+
+{% endblock %}

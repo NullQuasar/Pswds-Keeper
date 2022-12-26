@@ -1,0 +1,38 @@
+{% extends './layout.html' %}
+
+{% block content %}
+
+<form class="container d-block" style="width: 500px;" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row mb-3">
+      <label for="app" class="col-sm-2 col-form-label text-nowrap">App name</label>
+      <div class="col">
+        {{ form.application }}
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="username" class="col-sm-2 col-form-label text-nowrap">User name</label>
+      <div class="col">
+        <!-- class="form-control" !! --> 
+        {{ form.user_name }}
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2 col-form-label text-nowrap">E-mail</label>
+      <div class="col">
+        {{ form.email }}
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="pswd" class="col-sm-2 col-form-label text-nowrap">Password</label>
+      <div class="col">
+        {{ form.password }}
+      </div>
+    </div>
+    <div class="row d-block px-3">
+        <button type="submit" class="btn btn-primary w-100">Add</button>
+    </div>
+  </form>
+
+
+{% endblock %}
